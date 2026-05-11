@@ -507,13 +507,13 @@ public sealed class AzureCliTests
     [Fact]
     public void Null_Configurer_Throws_For_Required_Verbs()
     {
-        Assert.Throws<ArgumentNullException>(() => AzureCli.Login(FakeTool(), null!));
-        Assert.Throws<ArgumentNullException>(() => AzureCli.Rest(FakeTool(), null!));
-        Assert.Throws<ArgumentNullException>(() => AzureCli.Group.Show(FakeTool(), null!));
-        Assert.Throws<ArgumentNullException>(() => AzureCli.Group.Create(FakeTool(), null!));
-        Assert.Throws<ArgumentNullException>(() => AzureCli.Group.Delete(FakeTool(), null!));
-        Assert.Throws<ArgumentNullException>(() => AzureCli.Account.Set(FakeTool(), null!));
-        Assert.Throws<ArgumentNullException>(() => AzureCli.Bicep.Build(FakeTool(), null!));
+        Assert.Throws<ArgumentNullException>(() => AzureCli.Login(FakeTool(), (Action<AzureCliLoginSettings>)null!));
+        Assert.Throws<ArgumentNullException>(() => AzureCli.Rest(FakeTool(), (Action<AzureCliRestSettings>)null!));
+        Assert.Throws<ArgumentNullException>(() => AzureCli.Group.Show(FakeTool(), (Action<AzureCliGroupShowSettings>)null!));
+        Assert.Throws<ArgumentNullException>(() => AzureCli.Group.Create(FakeTool(), (Action<AzureCliGroupCreateSettings>)null!));
+        Assert.Throws<ArgumentNullException>(() => AzureCli.Group.Delete(FakeTool(), (Action<AzureCliGroupDeleteSettings>)null!));
+        Assert.Throws<ArgumentNullException>(() => AzureCli.Account.Set(FakeTool(), (Action<AzureCliAccountSetSettings>)null!));
+        Assert.Throws<ArgumentNullException>(() => AzureCli.Bicep.Build(FakeTool(), (Action<AzureCliBicepBuildSettings>)null!));
     }
 
     [Fact]
