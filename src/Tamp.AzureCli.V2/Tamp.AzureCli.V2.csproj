@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
+    <RootNamespace>Tamp.AzureCli.V2</RootNamespace>
+    <AssemblyName>Tamp.AzureCli.V2</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Package">
+    <PackageId>Tamp.AzureCli.V2</PackageId>
+    <Description>Tamp wrapper for the Azure CLI (az) 2.x. v0.1.0 covers: Login (SPN, identity, federated-token, interactive), Rest (the generic REST proxy that unlocks Flex Consumption listKeys and arbitrary ARM API access), Group (show/create/delete/exists), Bicep.Build, plus a Raw escape hatch for the rest of the enormous az surface. Service principal secrets + federated tokens typed as Secret.</Description>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(TampCorePath)" Condition="'$(TampCoreMode)' == 'project'" />
+    <PackageReference Include="Tamp.Core" Condition="'$(TampCoreMode)' == 'package'" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>
