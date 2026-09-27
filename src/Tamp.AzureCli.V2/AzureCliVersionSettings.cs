@@ -73,7 +73,7 @@ public sealed class AzureCliAccountSetSettings : AzureCliSettingsBase
 /// </summary>
 /// <remarks>
 /// <para>
-/// The CLI emits the token to stdout (JSON or scalar depending on <see cref="AzureCliSettingsBase.OutputFormat"/>);
+/// The CLI emits the token to stdout (JSON or scalar depending on <c>AzureCliSettingsBase.OutputFormat</c>);
 /// callers route the captured stdout to <see cref="ProcessRunner.Capture"/> rather than direct
 /// execution and parse the result. The CLI does NOT redact the token automatically, so consumers
 /// must wrap it in a <see cref="Secret"/> at the boundary — see the helper pattern in the README.
