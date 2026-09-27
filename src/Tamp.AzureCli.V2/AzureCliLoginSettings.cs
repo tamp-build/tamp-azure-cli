@@ -15,7 +15,7 @@ public enum AzureCliLoginMode
     ServicePrincipal,
     /// <summary>Service principal with certificate. Username = client ID, Certificate = PEM path.</summary>
     ServicePrincipalCertificate,
-    /// <summary>Managed identity. Optionally specify <see cref="UserAssignedClientId"/>, <see cref="UserAssignedObjectId"/>, or <see cref="UserAssignedResourceId"/>.</summary>
+    /// <summary>Managed identity. Optionally specify <c>UserAssignedClientId</c>, <c>UserAssignedObjectId</c>, or <c>UserAssignedResourceId</c>.</summary>
     ManagedIdentity,
     /// <summary>OIDC / Workload Identity Federation. Username = client ID, FederatedToken = OIDC token from the trust provider (typed as <see cref="Secret"/>).</summary>
     FederatedToken,
